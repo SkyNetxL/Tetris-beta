@@ -1,45 +1,86 @@
 
 body {
-    margin: 0;
-    background: linear-gradient(to top, #0f0c29, #302b63, #24243e);
-    overflow: hidden;
-    font-family: 'Orbitron', sans-serif;
+  margin: 0;
+  overflow: hidden;
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(to top, #01010a, #0a0a1a);
+  color: #0ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
+
+canvas {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(#111822, #01010a);
+}
+
+#menu {
+  text-align: center;
+}
+
+#menu h1 {
+  font-size: 3em;
+  text-shadow: 0 0 15px #0ff;
+}
+
+#menu button {
+  font-size: 1.5em;
+  background: transparent;
+  border: 2px solid #0ff;
+  color: #0ff;
+  padding: 10px 30px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #0ff;
+  cursor: pointer;
+}
+
+#high-scores {
+  margin-top: 20px;
+}
+
+#score-list {
+  list-style: none;
+  padding: 0;
+  font-size: 1.2em;
+}
+
 #game {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
+  position: relative;
 }
-#tetris {
-    border: 4px solid #0ff;
-    box-shadow: 0 0 30px #0ff;
-    background-color: rgba(0, 0, 0, 0.8);
-}
+
 #score {
-    margin-top: 10px;
-    font-size: 2em;
-    color: #0ff;
-    text-shadow: 0 0 10px #0ff;
-    transition: transform 0.2s ease, color 0.2s ease;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 2em;
+  text-shadow: 0 0 10px #0ff;
 }
 
 #controls {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
 }
+
 #controls button {
-    background: #0ff2;
-    border: 2px solid #0ff;
-    color: #fff;
-    font-size: 1.5em;
-    padding: 10px 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #0ff;
-    transition: background 0.2s;
+  background: #0ff2;
+  border: 2px solid #0ff;
+  color: #fff;
+  font-size: 1.5em;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #0ff;
+  transition: background 0.2s;
 }
+
 #controls button:active {
-    background: #0ff8;
+  background: #0ff8;
 }
