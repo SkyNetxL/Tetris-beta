@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cyberpunk Tetris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="bg-music" src="music.mp3" autoplay loop></audio>
+    <div id="game">
+        <canvas id="tetris" width="240" height="400"></canvas>
+        <div id="score">0</div>
+    </div>
+    <div id="controls">
+        <button onclick="playerMove(-1)">◀</button>
+        <button onclick="playerRotate(1)">⟳</button>
+        <button onclick="playerMove(1)">▶</button>
+        <button onclick="playerDrop()">▼</button>
+    </div>
+    <script src="tetris.js"></script>
+</body>
+</html>
